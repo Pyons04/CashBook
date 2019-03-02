@@ -1,12 +1,12 @@
 const mysql = require('mysql');
 
-var dbConfig = {
+const dbConfig = Object.freeze({
   host: '127.0.0.1',
   user: 'root',
   password: '',
   database: 'bulletin_board'
-};
+});
 
-var connection = mysql.createConnection(dbConfig);
+const connection = mysql.createConnection(dbConfig);
 
 module.exports = connection;
